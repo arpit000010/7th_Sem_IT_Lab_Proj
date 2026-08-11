@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proj01 - Production Fullstack Web Application</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span style="font-size: 1.8rem;">🚀</span> Proj01 App
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="login.html" class="nav-link" id="nav-login">Sign In</a>
+      <a href="signup.html" class="btn-primary" id="nav-signup">Get Started</a>
+      <a href="profile.html" class="btn-secondary" id="nav-profile" style="display: none;">My Profile</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="glass-card wide" style="margin: 0 auto; text-align: center;">
+        <span class="badge badge-user" style="margin-bottom: 1.5rem; display: inline-block;">Production Architecture</span>
+        <h1>Secure Fullstack Platform</h1>
+        <p>Built with Node.js, Express, MongoDB Atlas, JWT Authentication, and a modern glassmorphic web interface.</p>
+        
+        <div class="hero-actions" style="margin-top: 2rem;">
+          <a href="signup.html" class="btn-primary" style="padding: 0.85rem 2rem; font-size: 1.05rem;">
+            Create Free Account ➔
+          </a>
+          <a href="login.html" class="btn-secondary" style="padding: 0.85rem 2rem; font-size: 1.05rem;">
+            Sign In to Account
+          </a>
+        </div>
+
+        <div style="margin-top: 3.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: left;">
+          <div class="detail-card">
+            <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">🔒</span>
+            <label>Authentication</label>
+            <p>JWT & HTTP-Only Secure Cookies with Bcrypt Password Hashing.</p>
+          </div>
+          <div class="detail-card">
+            <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">🍃</span>
+            <label>Database</label>
+            <p>MongoDB Atlas cloud connection with Schema Validation.</p>
+          </div>
+          <div class="detail-card">
+            <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">⚙️</span>
+            <label>Backend Structure</label>
+            <p>Production folder layout with Controllers, Routes, Models & Middlewares.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const token = API.getToken();
+      if (token) {
+        document.getElementById('nav-login').style.display = 'none';
+        document.getElementById('nav-signup').style.display = 'none';
+        document.getElementById('nav-profile').style.display = 'inline-flex';
+      }
+    });
+  </script>
+</body>
+</html>

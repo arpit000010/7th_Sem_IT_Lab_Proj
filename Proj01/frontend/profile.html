@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Proj01 App</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span style="font-size: 1.8rem;">🚀</span> Proj01 App
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <button id="logout-btn" class="btn-danger">Sign Out</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="glass-card wide" id="profile-content">
+      <div class="profile-header-bar">
+        <div class="profile-info">
+          <h3 id="user-name">Loading User...</h3>
+          <div class="email" id="user-email">loading...</div>
+          <span class="badge badge-user" id="user-role">user</span>
+        </div>
+        <div style="margin-left: auto;">
+          <button id="open-edit-modal-btn" class="btn-secondary">✏️ Edit Profile</button>
+        </div>
+      </div>
+
+      <div class="profile-details-grid">
+        <div class="detail-card">
+          <label>Biography</label>
+          <p id="user-bio">Welcome to my profile! I am excited to be here.</p>
+        </div>
+        <div class="detail-card">
+          <label>Member Since</label>
+          <p id="user-created">Just now</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-backdrop" id="edit-profile-modal">
+    <div class="glass-card" style="max-width: 520px;">
+      <div class="card-header">
+        <h2>Edit Profile</h2>
+        <p>Update your personal info & password</p>
+      </div>
+
+      <form id="edit-profile-form">
+        <div class="form-group">
+          <label for="edit-name">Full Name</label>
+          <input type="text" id="edit-name" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="edit-email">Email Address</label>
+          <input type="email" id="edit-email" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="edit-bio">Bio</label>
+          <textarea id="edit-bio" class="form-control" rows="3" placeholder="Tell us about yourself..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="edit-password">New Password (leave blank to keep current)</label>
+          <input type="password" id="edit-password" class="form-control" placeholder="••••••••">
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+          <button type="button" id="close-modal-btn" class="btn-secondary" style="flex: 1;">Cancel</button>
+          <button type="submit" class="btn-primary" style="flex: 1;">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
