@@ -39,7 +39,6 @@ const registerUser = async (req, res, next) => {
           email: user.email,
           bio: user.bio,
           role: user.role,
-          createdAt: user.createdAt,
         },
       });
     } else {
@@ -79,7 +78,6 @@ const loginUser = async (req, res, next) => {
           email: user.email,
           bio: user.bio,
           role: user.role,
-          createdAt: user.createdAt,
         },
       });
     } else {

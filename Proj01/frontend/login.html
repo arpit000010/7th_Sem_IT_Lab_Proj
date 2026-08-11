@@ -5,15 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Proj01 App</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
-    <a href="index.html" class="nav-brand">
-      <span style="font-size: 1.8rem;">🚀</span> Proj01 App
-    </a>
+    <a href="index.html" class="nav-brand">Proj01 App</a>
     <div class="nav-links">
       <a href="index.html" class="nav-link">Home</a>
       <a href="signup.html" class="btn-secondary">Create Account</a>
@@ -23,8 +18,8 @@
   <main class="container">
     <div class="glass-card">
       <div class="card-header">
-        <h2>Welcome Back</h2>
-        <p>Sign in to access your secure profile dashboard</p>
+        <h2>Sign In</h2>
+        <p>Enter your details to log in</p>
       </div>
 
       <form id="login-form">
@@ -38,17 +33,17 @@
         <div class="form-group">
           <label for="password">Password</label>
           <div class="input-wrapper">
-            <input type="password" id="password" class="form-control" placeholder="••••••••" required autocomplete="current-password">
-            <button type="button" class="toggle-password">👁️ Show</button>
+            <input type="password" id="password" class="form-control" placeholder="Password" required autocomplete="current-password">
+            <button type="button" class="toggle-password">Show</button>
           </div>
         </div>
 
-        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem; padding: 0.85rem;">
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">
           Sign In
         </button>
 
         <div class="form-footer">
-          Don't have an account? <a href="signup.html">Create one here</a>
+          Don't have an account? <a href="signup.html">Create account</a>
         </div>
       </form>
     </div>

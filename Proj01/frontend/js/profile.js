@@ -15,11 +15,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       document.getElementById('user-email').textContent = user.email;
       document.getElementById('user-role').textContent = user.role || 'user';
       document.getElementById('user-bio').textContent = user.bio || 'No bio provided yet.';
-      document.getElementById('user-created').textContent = new Date(user.createdAt).toLocaleDateString(undefined, {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      });
 
       document.getElementById('edit-name').value = user.name;
       document.getElementById('edit-email').value = user.email;
